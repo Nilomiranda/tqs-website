@@ -1,0 +1,104 @@
+/*
+ * ==============================
+ * ===== HEADER STYLES ==========
+ * ==============================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-header {
+    padding: 0 100px;
+    height: 100vh;
+}
+
+.header-img {
+    background-image: url('../../../public/icons/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 738px;
+    width: 100%; 
+}
+
+.nav-menu-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 35px;
+    color: #FFF;
+    font-size: 23px;
+    font-family: 'Helvetic', sans-serif;
+    font-weight: bold;
+    list-style: none;
+}
+
+.nav-menu li {
+    cursor: pointer;
+}
+
+.hero-container {
+    display: flex;
+    height: 600px;
+}
+
+.slogan-container {
+    color: #FFF;
+    margin-top: 15px;
+    width: 723px;
+    height: 301px;
+    font-weight: bold;
+    font-family: 'Helvetic', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slogan-container h1 {
+    margin: 0;
+    padding-right: 100px;
+}
+
+.slogan-container h2 {
+    font-weight: normal;
+    font-size: 18px;
+    width: 500px;
+}
+
+.slogan-container button {
+    width: 337px;
+    height: 62px;
+    border-radius: 40px;
+    background-color: #CC3D4E;
+    color: #FFF;
+    border: none;
+    font-size: 25px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.company-logo {
+    margin-top: 150px;
+    width: 427px;
+    height: 327px;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 75px;
+    align-self: center;
+    margin: 0;
+}
