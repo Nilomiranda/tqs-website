@@ -9,12 +9,17 @@ import Menu from "./menu"
 import "./styles/style.css"
 
 const Header = ({ siteTitle }) => (
-  <header
-    className="header-img"
-  >
+  <div className="hero-header header-img">
+    <header className="nav-menu-container">
+      <ul className="nav-menu">
+        <li>Home</li>
+        <li>Contact us</li>
+        <li>About</li>
+        <li>Blog</li>
+      </ul>
+    </header>
     <Menu />
-  </header>
-  
+  </div>
 )
 
 Header.propTypes = {
