@@ -4,7 +4,7 @@ import React from 'react'
 import "./styles/style.css"
 
 const Menu = () => (
-<div>
+<div className="menu-wrapper">
     <div className="hero-container">
         <div className="slogan-container">
             <h1>
