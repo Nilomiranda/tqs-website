@@ -11,6 +11,8 @@ import "./styles/index.css"
 import enterprise from '../images/enterprise.svg' // enterprise icon
 import skype from '../images/skype.svg' // skype icon
 import individual from '../images/employee.svg' // individual icon
+import send from '../images/send.png' // send icon
+import facebook from '../images/facebook.svg' // facebook icon
 
 const IndexPage = () => (
   <Layout>
@@ -113,18 +115,50 @@ const IndexPage = () => (
           <div className="service classes">
             <div className="class-option">
               <img src={ enterprise } alt="Enterprise icon" className="service-icons"/>  
-              <h3>Corporate</h3>
+              <h3>Corporate classes</h3>
             </div>
             <div className="class-option">
               <img src={ skype } alt="Skype icon" className="service-icons" />
-              <h3>Skype</h3>
+              <h3>Skype classes</h3>
             </div>
             <div className="class-option">
               <img src={ individual } alt="Individual icon" className="service-icons" />
-              <h3>Individual</h3>
+              <h3>Individual classes</h3>
             </div>
           </div>
         </div>
+      </div>
+      <div className="section-container email-container">
+        <div className="signup-container">
+          <h2>I would like information about...</h2>
+          <form>
+            <div className="form-options">
+              <div className="form-option">
+                <input type="checkbox" id="classes" name="classes" />
+                <label for="classes">Classes</label>
+              </div>
+              <div className="form-option">
+                <input type="checkbox" id="translations" name="translations" />
+                <label for="translations">Translations</label>
+              </div>
+            </div>
+            <div className="email-form">
+              <input type="email" name="email" placeholder="Your email..." />
+              <button type="submit">
+                <img src={ send } alt="Send icon" />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div className="footer-container">
+        <div className="tri-top"></div>
+        <footer className="section-container">
+          <a href="https://www.facebook.com/TheQueensSpeech/" target="_blank">
+            <img src={ facebook } alt="Facebook logo"/>
+          </a>
+          <p>The Queen’s Speech Company  © { new Date().getFullYear() }</p>
+        </footer>
       </div>
     </div>
   </Layout> 
