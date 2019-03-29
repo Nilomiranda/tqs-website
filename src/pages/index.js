@@ -7,12 +7,14 @@ import SEO from "../components/seo"
 import "./styles/index.css"
 
 // images
-
 import enterprise from '../images/enterprise.svg' // enterprise icon
 import skype from '../images/skype.svg' // skype icon
 import individual from '../images/employee.svg' // individual icon
 import send from '../images/send.png' // send icon
 import facebook from '../images/facebook.svg' // facebook icon
+import arcadis from '../images/arcadis.png' // arcadis company logo
+import usp from '../images/usp.png' // usp company logo
+import safra from '../images/safra.png' // safra company logo
 
 const IndexPage = () => (
   <Layout>
@@ -34,7 +36,11 @@ const IndexPage = () => (
     </div>
     <div className="worked-container section-container">
       <h2>Companies we worked with</h2>
-      <div className="companies-container"></div>
+      <div className="companies-container">
+        <img src={ arcadis } data-company="arcadis" alt="Arcadis company logo"/>
+        <img src={ usp } data-company="usp" alt="USP company logo"/>
+        <img src={ safra } data-company="safra" alt="Safra bank company logo"/>
+      </div>
     </div>
     <div className="team-container">
       <div className="team-members section-container">
@@ -160,7 +166,7 @@ const IndexPage = () => (
           <p>The Queen’s Speech Company  © { new Date().getFullYear() }</p>
         </footer>
       </div>
-    </div>
+    </div> { /* end of team-container */ }
   </Layout> 
 )
 

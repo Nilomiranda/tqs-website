@@ -19,10 +19,8 @@ p, label {
 .section-container {
     display: flex;
     flex-direction: column;
-    box-flex: wrap;
     padding: 50px 220px;
     justify-content: space-around;
-    height: 100%
 }
 
 .section-container h2 {
@@ -42,8 +40,8 @@ p, label {
     padding: 50px 220px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
-    height: 100%;
 }
 
 .about-content h2 {
@@ -63,22 +61,30 @@ p, label {
 }
 
 .worked-container {
+    display: flex;
     color: #00247D;
     padding-left: 10px;
     padding-right: 10px;
-    height: 470px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .worked-container h2 {
     font-size: 45px;
+    margin: 0;
 }
 
-.companies-container {
-    background-image: url('../../../public/icons/companies.png');
-    background-repeat: no-repeat;   
-    height: 167px;
-    width: 900px;
+.companies-container {  
+    max-width: 900px;
     align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.companies-container img {
+    margin: 0;
 }
 
 .team-container {
@@ -88,12 +94,9 @@ p, label {
 }
 
 .team-members {
-    height: 100%;
-    padding: 50px 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-top: 60px;
 }
 
 .team-members h2 {
@@ -314,4 +317,14 @@ footer p {
  *==============================================================================
  */
 
- 
+@media screen and (max-width: 767px) {
+    .section-container, .about-content {
+        padding: 50px 90px; 
+    }
+
+    .team-members {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

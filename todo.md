@@ -1,0 +1,1 @@
+#Fix worked companies logos
