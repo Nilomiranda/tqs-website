@@ -159,4 +159,33 @@
     .header-img {
         background-image: unset;
     }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .company-logo {
+        order: 1;
+    }
+
+    .slogan-container {
+        color: #00247D;
+        margin-top: 15px;
+        width: 100%;
+        height: unset;
+        font-weight: bold;
+        font-family: 'Helvetic', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
 }
