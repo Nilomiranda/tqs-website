@@ -88,12 +88,13 @@ p, label {
 }
 
 .team-container {
-    background-color: #00247D;
-    height: 900px;
+    /* background-color: #00247D; */
+    /* height: 900px; */
     color: #FFF;
 }
 
 .team-members {
+    background-color: #00247D;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -218,6 +219,7 @@ p, label {
 
 .signup-container {
     background-color: #3D66CC;
+    color: #FFF;
     height: 412px;
     width: 900px;
     border-radius: 30px;

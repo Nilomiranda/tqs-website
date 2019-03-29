@@ -80,7 +80,8 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="tri-left"></div>
-      <div className="section-container testimonials-container">
+    </div> { /* end of team-container */ }
+    <div className="section-container testimonials-container">
         <h2>Testimonials</h2>
         <div className="testimonials">
           <div className="testimonial">
@@ -166,7 +167,6 @@ const IndexPage = () => (
           <p>The Queen’s Speech Company  © { new Date().getFullYear() }</p>
         </footer>
       </div>
-    </div> { /* end of team-container */ }
   </Layout> 
 )
 
