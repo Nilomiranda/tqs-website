@@ -1,1 +1,1 @@
-#Fix worked companies logos
+#Fix team responsive size

@@ -88,16 +88,15 @@ p, label {
 }
 
 .team-container {
-    /* background-color: #00247D; */
-    /* height: 900px; */
     color: #FFF;
 }
 
 .team-members {
     background-color: #00247D;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    min-height: 900px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 80px 180px;
 }
 
 .team-members h2 {
@@ -105,8 +104,8 @@ p, label {
 }
 
 .member {
-    height: 245px;
-    width: 737px;
+    max-height: 245px;
+    max-width: 700px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -114,12 +113,14 @@ p, label {
 
 .member-right {
     align-self: flex-end;
+    max-width: 700px;
 }
 
 .member p {
     width: 540px;
-    height: 175px;
+    /* height: 175px; */
     font-size: large;
+    margin: 0;
     line-height: 200%;
 }
 
@@ -325,8 +326,12 @@ footer p {
     }
 
     .team-members {
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .member {
+        flex-direction: column;
     }
 }

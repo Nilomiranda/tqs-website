@@ -43,7 +43,7 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="team-container">
-      <div className="team-members section-container">
+      <div className="section-container team-members">
         <h2>Meet the team</h2>
         <div className="member">
           <div className="avatar" />
