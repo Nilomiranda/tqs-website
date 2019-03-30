@@ -329,6 +329,22 @@ footer p {
         padding: 50px 90px; 
     }
 
+    .about-container {
+        height: unset;
+    }
+
+    .worked-container {
+        height: 1000px;
+        padding: 50px;
+    }
+
+    .companies-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        padding: 100px 50px;
+    }
+
     .team-members {
         flex-direction: row;
         justify-content: center;
@@ -337,6 +353,10 @@ footer p {
 
     .member {
         flex-direction: column;
+    }
+
+    .testimonials-container {
+        padding: 20px;
     }
 
     .email-container {
