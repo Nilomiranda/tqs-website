@@ -1,1 +1,1 @@
-#Fix team responsive size
+#Fix slogan container size for responsiveness
