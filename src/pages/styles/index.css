@@ -63,8 +63,8 @@ p, label {
 .worked-container {
     display: flex;
     color: #00247D;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+    height: 400px;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -75,7 +75,7 @@ p, label {
 }
 
 .companies-container {  
-    max-width: 900px;
+    width: 70%;
     align-self: center;
     display: flex;
     justify-content: space-between;
@@ -314,6 +314,7 @@ footer img, a {
 footer p {
     width: fit-content;
     align-self: center;
+    color: #FFF;
 }
 
 /*
@@ -323,8 +324,22 @@ footer p {
  *==============================================================================
  *==============================================================================
  */
+@media screen and (max-width: 1040px) {
+    .worked-container {
+        height: 500px;
+        padding: 50px;
+    }
 
-@media screen and (max-width: 767px) {
+    .companies-container {
+        width: 100%;
+    }
+
+    .testimonials-container, .about-content, .services-content {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 781px) {
     .section-container, .about-content {
         padding: 50px 90px; 
     }
@@ -336,13 +351,17 @@ footer p {
     .worked-container {
         height: 1000px;
         padding: 50px;
+        display: flex;
+        flex-direction: column;
     }
 
     .companies-container {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         flex-grow: 2;
-        padding: 100px 50px;
+        height: 40%;
+        padding: 20px 50px;
     }
 
     .team-members {
@@ -356,6 +375,10 @@ footer p {
     }
 
     .testimonials-container {
+        padding: 20px;
+    }
+
+    .services-content {
         padding: 20px;
     }
 
@@ -395,5 +418,28 @@ footer p {
 
     .email-form {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .services-content {
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .service h3 {
+        margin: 0;
+    }
+
+    .translation {
+        justify-content: space-evenly;
+    }
+
+    .classes {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
     }
 }

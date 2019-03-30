@@ -117,7 +117,7 @@
 }
 
 /* MOBILE STYLES */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 781px) {
     .nav-menu-container {
         display: flex;
         width: 100%;
@@ -158,10 +158,10 @@
     }
 
     .menu-wrapper {
-        height: 900px;
+        height: 1100px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .header-img {
@@ -172,8 +172,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         padding: 20px;
+        height: 65%;
     }
 
     .company-logo {
@@ -191,6 +192,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         order: 2;
     }
 
@@ -205,8 +207,4 @@
     .slogan-container button {
         margin: 0;
     }
-}
-
-@media screen and (max-width: 479px) {
-
 }
