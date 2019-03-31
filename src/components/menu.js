@@ -15,9 +15,9 @@ const Menu = () => (
                 We got you covered with English classes or translation
                 services. 
             </h2>
-            <button>
+            <a href="#services">
                 See our services
-            </button>
+            </a>
         </div>
         <img className="company-logo" src="icons/main_logo.png"/>
     </div>

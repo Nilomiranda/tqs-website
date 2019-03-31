@@ -111,7 +111,7 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-      <div className="services-container">
+      <div className="services-container" id="services">
         <div className="tri-right" />
         <div className="services-content section-container">
           <h2>Services</h2>

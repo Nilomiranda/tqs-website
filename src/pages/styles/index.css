@@ -116,8 +116,20 @@ p, label {
     max-width: 700px;
 }
 
+.member-description {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.member-description p, .member-description h3 {
+    width: fit-content;
+    margin: 0;
+}
+
 .member p {
-    width: 540px;
+    /* width: 540px; */
     /* height: 175px; */
     font-size: large;
     margin: 0;
@@ -125,8 +137,10 @@ p, label {
 }
 
 .avatar {
-    width: 125px;
-    height: 125px;
+    min-width: 125px;
+    min-height: 125px;
+    max-width: 125px;
+    max-height: 125px;
     border-radius: 50%;
     border: 10px solid #FFF;
     background-image: url('../../../public/icons/male-avatar.jpeg');
@@ -367,11 +381,18 @@ footer p {
     .team-members {
         flex-direction: row;
         justify-content: center;
-        padding: 0;
+        padding: 30px 90px;
+        min-height: 1100px;
     }
 
     .member {
+        max-height: initial;
         flex-direction: column;
+    }
+
+    .member-right {
+        align-self: initial;
+        max-width: 700px;
     }
 
     .testimonials-container {

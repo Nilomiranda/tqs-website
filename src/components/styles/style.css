@@ -84,7 +84,7 @@
     /* width: 500px; */
 }
 
-.slogan-container button {
+.slogan-container a {
     width: 337px;
     height: 62px;
     border-radius: 40px;
@@ -95,6 +95,9 @@
     align-self: center;
     cursor: pointer;
     margin-right: 120px;
+    text-align: center;
+    padding-top: 18px;
+    text-decoration: none;
 }
 
 .company-logo {
@@ -117,6 +120,33 @@
 }
 
 /* MOBILE STYLES */
+@media screen and (max-width: 1326px) {
+    .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 700px;
+    }
+    
+    .hero-container {
+        padding: 0 20px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .header-img {
+        background-image: url('../../../public/icons/medium-triangle.png');
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .header-img {
+        background-image: url('../../../public/icons/header-rectangle.png');
+        background-size: fixed;
+    }
+}
+
 @media screen and (max-width: 781px) {
     .nav-menu-container {
         display: flex;
