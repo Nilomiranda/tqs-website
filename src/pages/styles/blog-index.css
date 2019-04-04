@@ -17,6 +17,22 @@ header {
     display: flex;
 }
 
+.mob-nav {
+    display: none;
+}
+
+.mob-nav ul {
+    display: none;
+}
+
+.mob-nav ul.mob-visible {
+    display: block;
+}
+
+.mob-invisible {
+    display: none;
+}
+
 header img {
     margin: 0;
     width: 69px;
@@ -100,4 +116,18 @@ header li:hover {
     width: 50%;
     height: 50%;
     margin: 0;
+}
+
+@media screen and (max-width: 1160px) {
+    .web-nav {
+        display: none
+    }
+
+    .mob-nav {
+        display: initial;
+    }
+
+    .mob-icon:hover {
+        cursor: pointer;
+    }
 }
