@@ -53,6 +53,11 @@ header ul {
     flex: 1;
 }
 
+header ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
 header li {
     margin: 0;
 }

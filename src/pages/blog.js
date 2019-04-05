@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import BlogLayout from '../components/blog-layout'
 import SEO from '../components/seo'
@@ -44,27 +45,25 @@ export default class BlogPage extends React.Component {
                         <img src={ logo } alt="Company white logo"/>
                     </div>
                     <ul className="web-nav">
-                        <li>Home</li>
+                        <li><Link to="/">Home</Link></li>
                         <li>Contact us</li>
                         <li>About us</li>
-                        <li>Blog</li>
                     </ul>
                     <div className="mob-nav">
                         <div className="mob-nav-button">
                             <FontAwesomeIcon 
                                 onClick={ openMobileMenu } 
                                 className="mob-icon"
-                                icon={ faBars }
+                                icon={ this.state.openMobileMenu ? faTimes : faBars }
                                 size="2x"
                                 color="#FFF"
                             />
                             <span>{ this.state.menuText }</span>
                         </div>
                         <ul className={ this.state.openMobileMenu ? `mob-visible` : `mob-invisible` }>
-                            <li>Home</li>
+                            <li><Link to="/">Home</Link></li>
                             <li>Contact us</li>
                             <li>About us</li>
-                            <li>Blog</li>
                         </ul>
                     </div>
                 </header>
