@@ -14,18 +14,26 @@ import arrow from '../../public/icons/read-arrow.svg'
 export default class BlogPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { openMobileMenu: false }
+        this.state = { 
+            openMobileMenu: false,
+            menuText: `Menu` 
+        }
     }
 
     render () {
         const openMobileMenu = () => {
             // checks current state to toggle to correct one
             if (this.state.openMobileMenu) {
-                this.setState({ openMobileMenu: false })
+                this.setState({
+                    openMobileMenu: false,
+                    menuText: `Menu`
+                })
                 return
             }
-            this.setState({ openMobileMenu: true })
-            console.log('worked!')
+            this.setState({
+                openMobileMenu: true,
+                menuText: `Close menu`
+            })
         }
 
         return (
@@ -42,13 +50,16 @@ export default class BlogPage extends React.Component {
                         <li>Blog</li>
                     </ul>
                     <div className="mob-nav">
-                        <FontAwesomeIcon 
-                            onClick={ openMobileMenu } 
-                            className="mob-icon"
-                            icon={ faBars }
-                            size="2x"
-                            color="#FFF"
-                        />
+                        <div className="mob-nav-button">
+                            <FontAwesomeIcon 
+                                onClick={ openMobileMenu } 
+                                className="mob-icon"
+                                icon={ faBars }
+                                size="2x"
+                                color="#FFF"
+                            />
+                            <span>{ this.state.menuText }</span>
+                        </div>
                         <ul className={ this.state.openMobileMenu ? `mob-visible` : `mob-invisible` }>
                             <li>Home</li>
                             <li>Contact us</li>

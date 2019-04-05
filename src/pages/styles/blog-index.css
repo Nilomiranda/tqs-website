@@ -26,7 +26,7 @@ header {
 }
 
 .mob-nav ul.mob-visible {
-    display: block;
+    display: flex;
 }
 
 .mob-invisible {
@@ -119,12 +119,47 @@ header li:hover {
 }
 
 @media screen and (max-width: 1160px) {
+    header {
+        padding: 20px 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
     .web-nav {
         display: none
     }
 
     .mob-nav {
-        display: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    .mob-nav-button {
+        width: 150px;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .mob-visible {
+        padding: 20px 0;
+        width: 100%;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .mob-nav span, .mob-nav .mob-icon  {
+        align-self: center;
     }
 
     .mob-icon:hover {
