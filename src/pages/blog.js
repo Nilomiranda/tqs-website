@@ -40,9 +40,9 @@ export default class BlogPage extends React.Component {
         return (
             <BlogLayout>
                 <SEO title="Blog" keywords={[`blog`, `thequeensspeech`]}/>
-                <header>
+                <header className="blog-header">
                     <div className="logo-container">
-                        <img src={ logo } alt="Company white logo"/>
+                        <Link to="/"><img src={ logo } alt="Company white logo"/></Link>
                     </div>
                     <ul className="web-nav">
                         <li><Link to="/">Home</Link></li>
@@ -76,7 +76,7 @@ export default class BlogPage extends React.Component {
                             sed do eiusmod tempor incididunt ut labore et dolore 
                             magna aliqua</p>
                         </div>
-                        <a className="read-button" herf="#"><img className="button-icon" src={ arrow } alt="Read button"/></a>
+                        <a className="read-button" href="/single"><img className="button-icon" src={ arrow } alt="Read button"/></a>
                     </section>
                     <section>
                         <div className="post-content">
@@ -103,79 +103,3 @@ export default class BlogPage extends React.Component {
         ) 
     }   
 }
-
-// const BlogPage = () => {
-//     state = {
-//         menuVisible: false
-//     }
-
-//     const openMobileMenu = () => {
-//         this.setState({ menuVisible: true })
-//     }
-
-//     return (
-//         <BlogLayout>
-//             <SEO title="Blog" keywords={[`blog`, `thequeensspeech`]}/>
-//             <header>
-//                 <div className="logo-container">
-//                     <img src={ logo } alt="Company white logo"/>
-//                 </div>
-//                 <ul className="web-nav">
-//                     <li>Home</li>
-//                     <li>Contact us</li>
-//                     <li>About us</li>
-//                     <li>Blog</li>
-//                 </ul>
-//                 <div className="mob-nav">
-//                     <FontAwesomeIcon 
-//                         onClick={ openMobileMenu } 
-//                         className="mob-icon"
-//                         icon={ faBars }
-//                         size="2x"
-//                         color="#FFF"
-//                     />
-//                     <ul>
-//                         <li>Home</li>
-//                         <li>Contact us</li>
-//                         <li>About us</li>
-//                         <li>Blog</li>
-//                     </ul>
-//                 </div>
-//             </header>
-//             <main className="main-container">
-//                 <section>
-//                     <div className="post-content">
-//                         <h1>Post title</h1>
-//                         <h2>Danilo Miranda</h2>
-//                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-//                         sed do eiusmod tempor incididunt ut labore et dolore 
-//                         magna aliqua</p>
-//                     </div>
-//                     <a className="read-button" herf="#"><img className="button-icon" src={ arrow } alt="Read button"/></a>
-//                 </section>
-//                 <section>
-//                     <div className="post-content">
-//                         <h1>Post title</h1>
-//                         <h2>Danilo Miranda</h2>
-//                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-//                         sed do eiusmod tempor incididunt ut labore et dolore 
-//                         magna aliqua</p>
-//                     </div>
-//                     <a className="read-button" herf="#"><img className="button-icon" src={ arrow } alt="Read button"/></a>
-//                 </section>
-//                 <section>
-//                     <div className="post-content">
-//                         <h1>Post title</h1>
-//                         <h2>Danilo Miranda</h2>
-//                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-//                         sed do eiusmod tempor incididunt ut labore et dolore 
-//                         magna aliqua</p>
-//                     </div>
-//                     <a className="read-button" herf="#"><img className="button-icon" src={ arrow } alt="Read button"/></a>
-//                 </section>
-//             </main>
-//         </BlogLayout>
-//     )
-// }
-
-// export default BlogPage
