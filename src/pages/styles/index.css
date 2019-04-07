@@ -316,6 +316,7 @@ form label {
 .form-option {
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 .email-form {
@@ -543,5 +544,9 @@ footer p {
         width: 100%;
     }
 
-
+    .form-option {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
