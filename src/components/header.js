@@ -12,7 +12,6 @@ const Header = ({ siteTitle }) => (
   <div className="hero-header header-img">
     <header className="nav-menu-container">
       <ul className="nav-menu">
-        {/* <li>Home</li> */}
         <li>Contact us</li>
         <li><Link to="#about-us">About</Link></li>
         <li><Link to="/blog">Blog</Link></li>
