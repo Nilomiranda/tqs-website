@@ -80,7 +80,7 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="tri-left"></div>
-    </div> { /* end of team-container */ }
+    </div>
     <div className="section-container testimonials-container">
         <h2>Testimonials</h2>
         <div className="testimonials">
@@ -150,7 +150,9 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="email-form">
-              <input type="email" name="email" placeholder="Your email..." />
+              <input type="text" name="name" placeholder="Name..." />
+              <input type="email" name="email" placeholder="Email..." />
+              <input type="text" name="phone" placeholder="Phone..." />
               <button type="submit">
                 <img src={ send } alt="Send icon" />
               </button>

@@ -129,8 +129,6 @@ p, label {
 }
 
 .member p {
-    /* width: 540px; */
-    /* height: 175px; */
     font-size: large;
     margin: 0;
     line-height: 200%;
@@ -230,13 +228,14 @@ p, label {
     height: 700px;
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 .signup-container {
     background-color: #3D66CC;
     color: #FFF;
     height: 412px;
-    width: 900px;
+    /* width: 900px; */
     border-radius: 30px;
     padding: 90px 60px;
     display: flex;
@@ -263,18 +262,29 @@ form input[type="checkbox"] {
     width: 25px;
 }
 
-form button[type="submit"], input[type="email"] {
-    height: 60px;
-    border: none;
+form button[type="submit"],
+    input[type="email"],
+    input[type="text"] {
+        height: 60px;
+        border: none;
 }
 
-form input[type="email"] {
-    width: 500px;
+form input {
+    height: 60px;
     background-color: #E8E8E8;
     color: #6A6A6A;
     font-weight: bold;
     font-family: 'Helvetica', sans-serif;
     padding: 20px;
+    outline: none;
+}
+
+form input[type="email"] {
+    border-left: 2px solid rgba(1,1,1,0.3);
+    border-right: 2px solid rgba(1,1,1,0.3);
+}
+
+form input:first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
@@ -300,12 +310,22 @@ form label {
 .form-options {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    width: 70%;
+}
+
+.form-option {
+    display: flex;
+    align-items: center;
 }
 
 .email-form {
     display: flex;
     justify-content: center;
+}
+
+.email-form img {
+    height: 50%;
+    width: 30%;
 }
 
 .tri-top {
@@ -426,7 +446,6 @@ footer p {
         display: flex;
         flex-direction: column;
         margin: 0;
-        /* height: 100%; */
         width: 100%;
         justify-content: space-around;
         align-items: center;
@@ -440,6 +459,10 @@ footer p {
 
     .email-form {
         width: 100%;
+    }
+
+    .email-form * {
+        width: 33.3%;
     }
 }
 
@@ -464,6 +487,38 @@ footer p {
         flex-direction: column;
         height: 60%;
     }
+
+    .signup-container {
+        height: auto;
+    }
+
+    .email-form {
+        flex-wrap: wrap;
+    }
+
+    .email-form input {
+        width: 100%;
+    }
+
+    .email-form input:first-child {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .email-form button[type="submit"] {
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+    }
+
+    .email-form img {
+        height: 50%;
+        width: 8%;
+    }
+
+    .email-form input[type="email"] {
+        border: none;
+        border-top: 2px solid rgba(1,1,1,0.3);
+        border-bottom: 2px solid rgba(1,1,1,0.3);
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -476,7 +531,7 @@ footer p {
         flex-direction: column;
     }
 
-    .email-form input[type="email"] {
+    .email-form input:first-child {
         border-radius: 15px 15px 0 0;
     }
 
