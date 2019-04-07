@@ -9,6 +9,7 @@
     color: #00247D;
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 .content-header {
@@ -25,12 +26,13 @@
 .content {
     background-color: #fff;
     width: 80%;
+    height: fit-content;
     padding: 3% 10% 1% 10%;
     box-shadow: 5px 5px 10px #888;
     text-align: justify;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 1em;
     line-height: 2.3;
 }

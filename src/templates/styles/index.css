@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, label {
+    font-family: 'Helevetica', sans-serif;
+}
+
+.tri-right {
+    background-image: url('../../../public/icons/border-right.png');
+    background-repeat: no-repeat;
+    height: 88px;
+    width: 423px;
+    align-self: flex-end;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 220px;
+    justify-content: space-around;
+}
+
+.section-container h2 {
+    align-self: center;
+}
+
+.about-container {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    color: #FFF;
+    background-color: #00247D;
+    flex: 1;
+    padding: 50px 220px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-content h2 {
+    width: fit-content;
+    font-size: 45px;
+    align-self: center;
+    margin: 0;
+}
+
+.about-content p {
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Helvetica', sans-serif;
+    line-height: 50px;
+    line-break: auto;
+    margin: 0;
+}
+
+.worked-container {
+    display: flex;
+    color: #00247D;
+    padding: 10px;
+    height: 400px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.worked-container h2 {
+    font-size: 45px;
+    margin: 0;
+}
+
+.companies-container {  
+    width: 70%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.companies-container img {
+    margin: 0;
+}
+
+.team-container {
+    color: #FFF;
+}
+
+.team-members {
+    background-color: #00247D;
+    min-height: 900px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 80px 180px;
+}
+
+.team-members h2 {
+    font-size: 45px;
+}
+
+.member {
+    max-height: 245px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.member-right {
+    align-self: flex-end;
+    max-width: 700px;
+}
+
+.member-description {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.member-description p, .member-description h3 {
+    width: fit-content;
+    margin: 0;
+}
+
+.member p {
+    /* width: 540px; */
+    /* height: 175px; */
+    font-size: large;
+    margin: 0;
+    line-height: 200%;
+}
+
+.avatar {
+    min-width: 125px;
+    min-height: 125px;
+    max-width: 125px;
+    max-height: 125px;
+    border-radius: 50%;
+    border: 10px solid #FFF;
+    background-image: url('../../../public/icons/male-avatar.jpeg');
+    margin: 0;
+}
+
+.tri-left {
+    background-image: url('../../../public/icons/border-left.png');
+    width: 423px;
+    height: 88px;
+}
+
+.testimonials-container {
+    color: #00247D;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.testimonials-container h2 {
+    font-size: 45px;
+    flex-grow: 1;
+}
+
+.testimonials {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial p:last-child {
+    width: fit-content;
+    align-self: flex-end;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-content {
+    background-color: #00247D;
+    height: 850px;
+    color: #FFF;
+}
+
+.services-content h2 {
+    font-size: 45px;
+}
+
+.service-icons {
+    fill: #FFF;
+    width: 128px;
+    height: 128px;
+}
+
+.service {
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.classes {
+    display: flex;
+    flex-direction: row;
+}
+
+.class-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.email-container {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-container {
+    background-color: #3D66CC;
+    color: #FFF;
+    height: 412px;
+    width: 900px;
+    border-radius: 30px;
+    padding: 90px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.signup-container h2 {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form input[type="checkbox"] {
+    width: 25px;
+}
+
+form button[type="submit"], input[type="email"] {
+    height: 60px;
+    border: none;
+}
+
+form input[type="email"] {
+    width: 500px;
+    background-color: #E8E8E8;
+    color: #6A6A6A;
+    font-weight: bold;
+    font-family: 'Helvetica', sans-serif;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+form button[type="submit"] {
+    background-color: #B31B2C;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+form img {
+    margin: 0;
+}
+
+form label {
+    vertical-align: middle;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.email-form {
+    display: flex;
+    justify-content: center;
+}
+
+.tri-top {
+    background-image: url('../../../public/icons/big-triangle.png');
+    height: 116px;
+    width: 100%;
+}
+
+footer {
+    background-color: #00247D;
+    height: 300px !important;
+}
+
+footer img, a {
+    height: 70px;
+    width: 70px;
+    margin: 0;
+    align-self: center;
+}
+
+footer p {
+    width: fit-content;
+    align-self: center;
+    color: #FFF;
+}
+
+/*
+ *==============================================================================
+ *==============================================================================
+ *===================== MEDIA QUERIES FOR MOBILE DESIGN ========================
+ *==============================================================================
+ *==============================================================================
+ */
+@media screen and (max-width: 1040px) {
+    .worked-container {
+        height: 500px;
+        padding: 50px;
+    }
+
+    .companies-container {
+        width: 100%;
+    }
+
+    .testimonials-container, .about-content, .services-content {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 781px) {
+    .section-container, .about-content {
+        padding: 50px 90px; 
+    }
+
+    .about-container {
+        height: unset;
+    }
+
+    .worked-container {
+        height: 1000px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .companies-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-grow: 2;
+        height: 40%;
+        padding: 20px 50px;
+    }
+
+    .team-members {
+        flex-direction: row;
+        justify-content: center;
+        padding: 30px 90px;
+        min-height: 1100px;
+    }
+
+    .member {
+        max-height: initial;
+        flex-direction: column;
+    }
+
+    .member-right {
+        align-self: initial;
+        max-width: 700px;
+    }
+
+    .testimonials-container {
+        padding: 20px;
+    }
+
+    .services-content {
+        padding: 20px;
+    }
+
+    .email-container {
+        height: unset;
+        width: 100%;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .signup-container {
+        height: 300px;
+        width: 90%;
+        border-radius: 30px;
+        padding: 30PX;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        align-self: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        /* height: 100%; */
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .form-options {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .email-form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .services-content {
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .service h3 {
+        margin: 0;
+    }
+
+    .translation {
+        justify-content: space-evenly;
+    }
+
+    .classes {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+    }
+}

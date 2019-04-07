@@ -1,37 +1,32 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import BlogLayout from '../components/blog-layout'
 import SEO from '../components/seo'
 
-import './styles/blog-index.css'
+// styles
+import './styles/single.css'
 
 // images
 import logo from '../../public/icons/logo-white.png'
-import arrow from '../../public/icons/read-arrow.svg'
 
-export const query = graphql`
-  query HomepageQuery {
-    allMarkdownRemark (
-        sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-            path
-            excerpt
-          }
+export const post = graphql`
+    query($path: String!) {
+        markdownRemark (frontmatter: { path: { eq: $path } }) {
+            html
+            frontmatter {
+                title
+                date (formatString: "MMMM DD, YYYY")
+                path
+                author
+            }
         }
-      }
     }
-  }
 `
 
-export default class BlogPage extends React.Component {
+export default class Single extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -42,8 +37,9 @@ export default class BlogPage extends React.Component {
 
     render () {
         const { data } = this.props
-        const { edges } = data.allMarkdownRemark
-
+        const { markdownRemark } = data
+        const { frontmatter, html } = markdownRemark
+        
         const openMobileMenu = () => {
             // checks current state to toggle to correct one
             if (this.state.openMobileMenu) {
@@ -61,15 +57,14 @@ export default class BlogPage extends React.Component {
 
         return (
             <BlogLayout>
-                <SEO title="Blog" keywords={[`blog`, `thequeensspeech`]}/>
+                <SEO title="Blog post" keywords={[`blog`, `post title`]}/>
                 <header className="blog-header">
                     <div className="logo-container">
                         <Link to="/"><img src={ logo } alt="Company white logo"/></Link>
                     </div>
                     <ul className="web-nav">
                         <li><Link to="/">Home</Link></li>
-                        <li>Contact us</li>
-                        <li>About us</li>
+                        <li><Link to="/blog">Back to blog</Link></li>
                     </ul>
                     <div className="mob-nav">
                         <div className="mob-nav-button">
@@ -89,24 +84,20 @@ export default class BlogPage extends React.Component {
                         </ul>
                     </div>
                 </header>
-                <main className="main-container">
-                    {
-                        edges.map(edge => {
-                            const { frontmatter } = edge.node
-                            return (
-                                <section key={ frontmatter.path }>
-                                    <div className="post-content">
-                                        <h1>{ frontmatter.title }</h1>
-                                        <h2>{ frontmatter.author }</h2>
-                                        <p>{ frontmatter.excerpt }</p>
-                                    </div>
-                                    <Link className="read-button" to={frontmatter.path}><img className="button-icon" src={ arrow } alt="Read button"/></Link>
-                                </section>
-                            )
-                        })
-                    }
-                </main>
+                <section className="content-container">
+                    <article className="content">
+                        <div className="content-header">
+                            <h1>{ frontmatter.title }</h1>
+                            <p clasName="post-date">{ frontmatter.date }</p>
+                            <p className="post-author">{ frontmatter.author }</p>
+                        </div>
+                        <div
+                            dangerouslySetInnerHTML={{ __html: html }}
+                        >   
+                        </div>
+                    </article>
+                </section>
             </BlogLayout>
-        ) 
-    }   
+        )
+    }
 }
