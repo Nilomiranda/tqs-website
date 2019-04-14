@@ -46,7 +46,7 @@ export default class IndexPage extends React.Component {
     event.preventDefault()
     const data = this.state
     const jsonData = await JSON.stringify(data)
-    const url = 'http://localhost:3000/'
+    const url = 'https://tqs-email-api.herokuapp.com/'
     return await fetch(url, {
       method: 'POST',
       mode: 'cors',
