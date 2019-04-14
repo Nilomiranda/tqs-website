@@ -13,8 +13,12 @@ const Header = ({ siteTitle }) => (
     <header className="nav-menu-container">
       <ul className="nav-menu">
         <li>Contact us</li>
-        <li><Link to="#about-us">About</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
+        <li>
+          <Link to="#about-us">About</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
       </ul>
     </header>
     <Menu />

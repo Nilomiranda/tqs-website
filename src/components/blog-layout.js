@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 
-const BlogLayout = (props) => {
+const BlogLayout = props => {
   console.log(props)
   const { children } = props
   return (
@@ -34,7 +34,7 @@ const BlogLayout = (props) => {
           >
             <main
               style={{
-                height: `100%`
+                height: `100%`,
               }}
             >
               {children}
